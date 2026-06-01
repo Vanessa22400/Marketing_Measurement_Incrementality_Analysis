@@ -1,263 +1,254 @@
 # Marketing Measurement & Incrementality Analysis - DACH Region
+*Evaluating marketing effectiveness across Germany, Austria and Switzerland using Conversion Lift studies, Marketing Mix Modeling (MMM), and ROI analysis.*
 
-*End-to-end marketing measurement simulation for a DACH-region e-commerce company using Conversion Lift studies, MMM calibration, statistical testing and ROI optimization.*
+**Dataset:** 3 years of simulated marketing performance data (1,095 daily observations)
 
-**Dataset**: Simulated multi-channel marketing dataset (12 months of operations)
-**Techniques**: EDA, hypothesis testing, Conversion Lift, MMM, SQL analysis
-**Key Result**: Google Ads showed the strongest measurable incremental contribution and Switzerland demonstrated the highest ROI efficiency
+**Techniques:** EDA, Conversion Lift, Incrementality Analysis, Hypothesis Testing, Marketing Mix Modeling (MMM), Adstock Transformation, ROI Analysis
+
+**Key Results**
+- Conversion Lift of **28.6%** between exposed and control groups
+- Statistically significant uplift across all DACH markets
+- Switzerland achieved the highest marketing efficiency (ROI)
+- Google Ads showed the strongest contribution in the MMM model
+- Regional differences highlighted opportunities for budget optimization
 
 ---
 
 ## Business Context
 
-Modern marketing measurement has become increasingly complex due to:
+Privacy changes and the gradual reduction of traditional tracking methods have increased the importance of incrementality testing and aggregate measurement frameworks.
 
-* privacy restrictions,
-* tracking limitations,
-* cookie loss,
-* fragmented attribution.
+This project simulates the work of a Measurement Implementation Expert supporting a DACH-based e-commerce company that wants to understand the true business impact of its marketing investments.
 
-As a result, organizations can no longer rely only on traditional attribution models to evaluate marketing performance.
-
-This project simulates how a modern measurement consulting team could evaluate advertising effectiveness for an e-commerce company operating across the DACH region:
-
-* Germany
-* Austria
-* Switzerland
-
-The objective is to understand whether marketing investments are truly generating incremental business growth and how ROI can be optimized across channels and regions.
+The objective is to move beyond traditional attribution and evaluate whether marketing activities are generating real incremental business value.
 
 ---
 
-## Dataset
+## Business Problem
 
-The project uses a simulated marketing dataset representing 12 months of campaign activity across multiple channels.
+The company wants to answer three key questions:
 
-The dataset includes:
-
-* Google Ads investment
-* Meta Ads investment
-* TV investment
-* Influencer Marketing investment
-* impressions
-* clicks
-* conversions
-* revenue
-* seasonal indicators
-* regional segmentation
-
-The project intentionally simulates realistic business behavior, including:
-
-* seasonal demand peaks,
-* regional differences,
-* saturation effects,
-* delayed advertising impact.
-
----
-
-## Problem Statement
-
-How can a company accurately measure the real business impact of advertising investment in a privacy-limited environment?
-
-The project focuses on three core measurement challenges:
-
-* isolating incremental impact,
-* estimating channel contribution,
-* optimizing ROI allocation.
+- Are Google Ads campaigns generating incremental conversions?
+- Which marketing channels contribute most to business performance?
+- How should marketing budgets be allocated across DACH markets?
 
 ---
 
 ## Objectives
 
-* Analyze marketing performance across DACH markets
-* Understand regional differences in ROI and incrementality
-* Simulate a Conversion Lift experiment using control and test groups
-* Validate statistical significance of marketing uplift
-* Build a simplified Marketing Mix Model (MMM)
-* Simulate Adstock and saturation effects
-* Compare channel contribution across media types
-* Perform SQL-style ROI analysis
-* Generate strategic optimization recommendations
+- Measure incremental business impact through Conversion Lift studies
+- Validate statistical significance of marketing performance
+- Compare regional performance across Germany, Austria and Switzerland
+- Estimate channel contribution using Marketing Mix Modeling
+- Quantify ROI differences across markets
+- Generate strategic recommendations for budget allocation
 
 ---
 
 ## Methodology
 
-1. **Data Preparation & Feature Engineering**
-2. **Exploratory Data Analysis (EDA)**
-3. **Seasonality & Regional Analysis**
-4. **Conversion Lift & Incrementality Analysis**
-5. **Hypothesis Testing & Statistical Significance**
-6. **Marketing Mix Modeling (MMM)**
-7. **Adstock & Saturation Modeling**
-8. **MMM Calibration**
-9. **SQL-based ROI Analysis**
-10. **Strategic Budget Optimization**
+1. Data Preparation & Feature Engineering
+2. Exploratory Data Analysis (EDA)
+3. Conversion Lift & Incrementality Analysis
+4. Statistical Significance Testing
+5. Marketing Mix Modeling (MMM)
+6. Adstock Transformation
+7. Regional ROI Analysis
+8. Strategic Recommendations
 
 ---
 
 ## Tools & Technologies
 
-* Python (Pandas, NumPy)
-* Scikit-learn
-* SciPy (Hypothesis Testing)
-* Statsmodels
-* Matplotlib & Seaborn
-* SQL / BigQuery-style aggregation
-* Marketing Mix Modeling concepts
-* Incrementality & Lift methodology
+- Python (Pandas, NumPy)
+- Scikit-learn
+- SciPy (Hypothesis Testing)
+- Statsmodels
+- Matplotlib
+- Seaborn
+- SQL (BigQuery-style syntax)
+- Marketing Mix Modeling concepts
+- Experimental Design & Incrementality Measurement
 
 ---
 
 ## Exploratory Data Analysis Highlights
 
-The exploratory analysis revealed several important business patterns:
+The exploratory analysis revealed several relevant patterns:
 
-* **Germany generated the highest overall business volume**, but also showed signs of stronger saturation and lower relative efficiency.
-* **Switzerland demonstrated the strongest ROI efficiency**, despite lower total scale.
-* **Austria presented stable intermediate performance** across most KPIs.
-* Strong seasonal effects appeared between November and December, likely influenced by Black Friday and holiday shopping behavior.
-* Revenue dropped significantly after the holiday period, suggesting a clear post-holiday demand effect.
+- Strong positive relationship between clicks, conversions and revenue.
+- Clear seasonality patterns with revenue peaks during November and December.
+- Lower performance during summer months, suggesting seasonal demand effects.
+- Significant variation across DACH markets.
+- Marketing spend alone does not fully explain revenue performance, reinforcing the need for incrementality analysis.
 
-These findings reinforced the importance of regional measurement strategies instead of relying only on aggregated metrics.
+### Daily Marketing Investment
+
+![Daily Spend](Images/1_daily_google_spend.png)
+
+*Figure: Daily Google Ads investment across the analysis period.*
+
+### Revenue by Country
+
+![Revenue by Country](Images/2_revenue_by_country.png)
+
+*Figure: Average revenue performance across DACH markets.*
+
+### Monthly Revenue Seasonality
+
+![Monthly Revenue](Images/4_monthly_revenue.png)
+
+*Figure: Revenue peaks observed during holiday periods and year-end shopping seasons.*
+
+### Correlation Analysis
+
+![Correlation Heatmap](Images/5_correlation_heatmap.png)
+
+*Figure: Relationship between marketing activity and business KPIs.*
 
 ---
 
 ## Conversion Lift & Incrementality Analysis
 
-A simulated Conversion Lift experiment was developed using:
+Traditional attribution methods often measure total conversions, but they do not isolate whether those conversions happened because of advertising.
 
-* control group,
-* test group,
-* user-level split design.
+To estimate true marketing impact, a controlled experiment was simulated using Test and Control groups.
 
-The objective was to estimate incremental impact by measuring whether users converted because of advertising exposure or whether they would likely convert naturally.
+### Results
 
-### Key findings
+| Group | Conversion Rate |
+|---------|---------:|
+| Control | 3.09% |
+| Test | 3.98% |
 
-* Test groups consistently outperformed control groups across all regions.
-* Statistical testing confirmed that the uplift was statistically significant ("StatSig").
-* Switzerland demonstrated the strongest relative Lift performance.
-* Germany demonstrated larger scale but lower relative incremental efficiency.
+**Absolute Lift:** 0.88%
 
-The project also explored how regional consumer behavior may influence campaign responsiveness and advertising trust.
+**Relative Lift:** 28.6%
+
+### Interpretation
+
+The exposed group achieved a substantially higher conversion rate than the control group, indicating that advertising generated incremental conversions beyond the expected baseline.
+
+### Conversion Lift Results
+
+![Conversion Lift](Images/3_conversion_lift.png)
+
+*Figure: Comparison between Test and Control groups.*
+
+---
+
+## Statistical Significance Testing
+
+A two-proportion Z-test was conducted to validate whether the observed uplift was statistically significant.
+
+### Results
+
+- Z-statistic: 7.57
+- P-value: < 0.001
+
+The results indicate strong statistical evidence that the observed uplift is not explained by random variation.
+
+Regional analysis confirmed statistically significant lift across Germany, Austria and Switzerland.
 
 ---
 
 ## Marketing Mix Modeling (MMM)
 
-A simplified MMM framework was implemented to estimate channel contribution using aggregated time-series data.
+To understand long-term channel contribution, a simplified Marketing Mix Model was developed.
 
-The project included:
+The analysis incorporated Adstock transformation to capture the delayed effect of advertising investments.
 
-* baseline demand estimation,
-* media contribution modeling,
-* Adstock transformation,
-* saturation analysis.
+### Adstock Example
 
-### Key findings
+![Adstock Effect](Images/6_adstock_effect.png)
 
-* Google Ads showed the strongest measurable contribution.
-* Influencer Marketing also demonstrated strong estimated impact.
-* Meta Ads presented weaker contribution in the simulated environment.
-* TV investment showed lower measurable incremental efficiency and possible saturation effects.
+*Figure: Advertising impact persists beyond the original exposure period.*
 
----
+### Channel Contributions
 
-## Adstock & Saturation Effects
+| Channel | Coefficient |
+|---------|---------:|
+| Google Ads | 0.453 |
+| Influencers | 0.274 |
+| Meta Ads | 0.036 |
+| TV | -0.057 |
 
-The project simulated delayed advertising impact through Adstock modeling.
+### Interpretation
 
-This approach reflects how advertising influence may persist over time instead of disappearing immediately after exposure.
+- Google Ads generated the strongest business contribution.
+- Influencer campaigns demonstrated meaningful incremental impact.
+- Meta Ads showed a smaller contribution.
+- TV produced limited incremental value in this simulated environment.
 
-Saturation analysis also demonstrated diminishing returns, suggesting that additional investment may eventually generate progressively smaller incremental gains.
+### MMM Results
 
-These concepts are highly relevant in modern marketing measurement and media optimization.
+![MMM Coefficients](Images/7_mmm_coefficients.png)
 
----
-
-## SQL & ROI Analysis
-
-SQL-style aggregation using BigQuery-inspired syntax was used to calculate:
-
-* regional ROI,
-* conversion performance,
-* revenue contribution,
-* investment efficiency.
-
-### Regional ROI findings
-
-| Country     | ROI Performance                             |
-| ----------- | ------------------------------------------- |
-| Switzerland | Highest ROI efficiency                      |
-| Austria     | Stable intermediate ROI                     |
-| Germany     | Highest scale but lower relative efficiency |
-
-These results reinforced the importance of balancing scale and efficiency during strategic allocation decisions.
+*Figure: Relative channel contribution estimated by the MMM model.*
 
 ---
 
-## Strategic Optimization Recommendations
+## Regional ROI Analysis
 
-Based on:
+Regional performance revealed meaningful differences across DACH markets.
 
-* Lift studies,
-* MMM contribution,
-* saturation signals,
-* ROI analysis,
+| Country | ROI |
+|---------|---------:|
+| Switzerland | 590.9% |
+| Austria | 326.1% |
+| Germany | 182.8% |
 
-the project simulated an optimization scenario suggesting:
+### Interpretation
 
-* increased investment in Google Ads,
-* increased allocation to Influencer Marketing,
-* reduced TV allocation,
-* stronger focus on high-efficiency regional opportunities.
+- Switzerland achieved the highest efficiency and return on investment.
+- Germany generated the largest conversion volume due to market size.
+- Austria showed balanced performance between scale and efficiency.
+
+### ROI by Country
+
+![ROI Comparison](Images/8_roi_by_country.png)
+
+*Figure: ROI comparison across DACH markets.*
 
 ---
 
-## Business Impact & Applications
+## Business Impact
 
-This project demonstrates how modern organizations can combine:
+This project demonstrates how modern measurement frameworks combine:
 
-* experimentation,
-* causal inference,
-* statistical modeling,
-* marketing analytics,
-* ROI optimization
+- Experimentation
+- Incrementality Testing
+- Statistical Validation
+- Marketing Mix Modeling
+- ROI Analysis
 
-to improve measurement reliability and strategic decision-making.
+to support marketing investment decisions in privacy-focused environments.
 
-Potential applications include:
-
-* media planning,
-* budget optimization,
-* incrementality measurement,
-* campaign calibration,
-* regional strategy development.
+The methodology closely reflects the type of measurement challenges faced by large advertisers using Google Ads.
 
 ---
 
 ## Limitations
 
-* The dataset is simulated and simplified for educational purposes.
-* External variables such as macroeconomic conditions and competitor actions are not included.
-* MMM was implemented using a simplified regression-based approach instead of enterprise-scale Bayesian frameworks.
+- The dataset was simulated for educational purposes.
+- External factors such as competition, pricing changes and macroeconomic conditions were not modeled.
+- The MMM implementation was intentionally simplified for learning purposes.
 
 ---
 
 ## Next Steps
 
-* Integrate Bayesian MMM approaches (LightweightMMM)
-* Add customer segmentation analysis
-* Simulate attribution window differences
-* Expand cross-device and privacy-safe measurement scenarios
-* Build an interactive marketing performance dashboard
+- Expand MMM using Bayesian approaches and LightweightMMM.
+- Incorporate additional media channels and offline campaigns.
+- Perform budget optimization simulations.
+- Build an interactive dashboard for marketing stakeholders.
+- Implement automated KPI monitoring workflows.
 
 ---
 
 ## Repository Structure
 
-```bash
+```text
 .
 ├── data
 ├── notebooks
@@ -270,27 +261,20 @@ Potential applications include:
 
 ## Strategic Perspective
 
-This project was intentionally designed to simulate how modern marketing measurement teams combine experimentation, statistical modeling and business strategy to evaluate advertising effectiveness.
+This project was intentionally designed to simulate the responsibilities of a Measurement Implementation Expert working with DACH advertisers.
 
-Rather than relying only on attribution metrics, the analysis focuses on understanding incremental business impact, regional behavior differences and the limits of measurement in privacy-constrained environments.
+Beyond technical modeling, the analysis emphasizes business interpretation, regional differences, statistical validation and communication of actionable insights to decision-makers.
 
-The project also reflects an international perspective by incorporating regional dynamics across Germany, Austria and Switzerland.
+The goal was not only to measure performance, but to understand whether marketing investments are truly generating incremental business value.
 
 ---
 
 ## Conclusion
 
-This project simulates a modern end-to-end measurement framework for evaluating marketing effectiveness across the DACH region.
+This project demonstrates how modern marketing measurement goes beyond traditional attribution models.
 
-The analysis combines:
+By combining Conversion Lift studies, statistical significance testing, Marketing Mix Modeling and ROI analysis, it was possible to estimate the true incremental impact of marketing investments across DACH markets.
 
-* Conversion Lift studies,
-* Incrementality analysis,
-* MMM calibration,
-* ROI optimization,
-* statistical validation,
-* strategic regional analysis
+The results indicate that advertising generated meaningful incremental value, with Google Ads emerging as the strongest contributing channel and Switzerland achieving the highest marketing efficiency.
 
-to better understand how advertising investment contributes to measurable business growth.
-
-A key takeaway is that modern marketing measurement increasingly depends on combining experimentation and statistical modeling rather than relying only on traditional attribution systems.
+Most importantly, the project illustrates how data-driven measurement frameworks can support more informed budget allocation decisions in privacy-focused marketing environments.
