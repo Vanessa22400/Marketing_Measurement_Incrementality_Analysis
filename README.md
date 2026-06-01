@@ -100,6 +100,12 @@ The exploratory analysis revealed several relevant patterns:
 
 *Figure: Revenue peaks observed during holiday periods and year-end shopping seasons.*
 
+### Marketing Funnel Overview
+
+![Marketing Funnel](Images/6_marketing_funnel.png)
+
+*Figure: Average user progression through the marketing funnel.*
+
 ---
 
 ## Conversion Lift & Incrementality Analysis
