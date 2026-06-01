@@ -2,8 +2,7 @@
 
 *Evaluating marketing effectiveness across Germany, Austria and Switzerland using Conversion Lift studies, Incrementality Analysis, Marketing Mix Modeling (MMM), and ROI optimization.*
 
-**Dataset:** 3 years of simulated marketing performance data (1,095 daily observations)
-
+**Dataset:** 3 years of simulated marketing performance data (1,095 daily observations)  
 **Techniques:** EDA, Conversion Lift, Incrementality Analysis, Hypothesis Testing, Marketing Mix Modeling (MMM), Adstock Transformation, ROI Analysis
 
 ## Key Results
