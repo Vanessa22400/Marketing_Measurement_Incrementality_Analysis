@@ -100,12 +100,6 @@ The exploratory analysis revealed several relevant patterns:
 
 *Figure: Revenue peaks observed during holiday periods and year-end shopping seasons.*
 
-### Correlation Analysis
-
-![Correlation Heatmap](Images/5_correlation_heatmap.png)
-
-*Figure: Relationship between marketing activity and business KPIs.*
-
 ---
 
 ## Conversion Lift & Incrementality Analysis
