@@ -1,4 +1,4 @@
-# Marketing Measurement & Incrementality Analysis — DACH Region
+# Marketing Measurement & Incrementality Analysis in DACH Region
 
 ### Simulating a Measurement Implementation Expert workflow for a privacy-first advertising environment
 
