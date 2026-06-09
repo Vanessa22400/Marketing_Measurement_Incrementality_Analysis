@@ -78,16 +78,16 @@ purchasing power, making it the highest-ROI market in the analysis.
 
 ## Exploratory Data Analysis
 
-![Regional KPIs](images/3_1_kpis.png)
+![Regional KPIs](Images/3_1_kpis.png)
 *3-year cumulative performance: Switzerland generates 3.2x more revenue than Germany with the same spend.*
 
-![Seasonality](images/3_2_seasonality.png)
+![Seasonality](Images/3_2_seasonality.png)
 *Q4 drives the strongest revenue across all markets. Switzerland peaks at nearly €58,000/day in December.*
 
-![Funnel](images/3_3_funnel.png)
+![Funnel](Images/3_3_funnel.png)
 *Germany's CVR (3.31%) is 51% below Switzerland (5.00%), compounding into large CPA and ROI gaps.*
 
-![Correlation](images/3_4_correlation.png)
+![Correlation](Images/3_4_correlation.png)
 *Google spend correlates strongly with traffic (0.97) but weakly with revenue (0.30). ROI is largely independent of spend (0.14).*
 
 ---
@@ -98,10 +98,10 @@ A user-level experiment was simulated across **10,000 users** to isolate the tru
 incremental impact of ad exposure. Users were randomly assigned to Test and Control
 groups, with country-specific conversion rates reflecting real behavioral differences.
 
-![Lift Overall](images/4_2_lift_results.png)
+![Lift Overall](Images/4_2_lift_results.png)
 *Overall: Test group converted at 3.87% vs 3.61% control. Relative Lift of 7.3% across DACH.*
 
-![Lift by Country](images/4_3_regional_lift.png)
+![Lift by Country](Images/4_3_regional_lift.png)
 *Switzerland: +50.0% lift. Austria: +15.8%. Germany: -16.4% — exposed users converted less than non-exposed.*
 
 **Germany's negative lift** is a critical finding. It reflects a well-documented
@@ -116,10 +116,10 @@ measurement strategy needs to account for that dynamic explicitly.
 A two-proportion Z-test was applied to validate whether observed lift results
 are statistically reliable.
 
-![Significance](images/5_1_significance.png)
+![Significance](Images/5_1_significance.png)
 *Switzerland is the only market that crossed the significance threshold (p = 0.0459, Z = 1.996).*
 
-![Incremental Conversions](images/5_2_incremental.png)
+![Incremental Conversions](Images/5_2_incremental.png)
 *Net incremental conversions: Switzerland +19.3, Austria +8.6, Germany -14.8.*
 
 ---
@@ -129,10 +129,10 @@ are statistically reliable.
 A simplified MMM framework was built using **Adstock transformation** and **OLS
 regression** to estimate long-term channel contribution to revenue.
 
-![Adstock](images/6_1_adstock.png)
+![Adstock](Images/6_1_adstock.png)
 *Normalized Adstock shows advertising carry-over effect: impact persists beyond the day of exposure.*
 
-![MMM Coefficients](images/6_2_mmm_coefficients.png)
+![MMM Coefficients](Images/6_2_mmm_coefficients.png)
 *Model R² = 0.768. Seasonality is the dominant driver. Among paid channels, Meta and Google show the strongest coefficients — with a multicollinearity caveat discussed in section 6.2.*
 
 ---
@@ -142,7 +142,7 @@ regression** to estimate long-term channel contribution to revenue.
 Three SQL queries were run directly against the dataset using **SQLite** to surface
 performance insights through aggregation, window functions and efficiency segmentation.
 
-![SQL Insights](images/7_sql_insights.png)
+![SQL Insights](Images/7_sql_insights.png)
 
 - **Query 1 (ROI Ranking):** Switzerland ranked first in **every single month** across
   36 months. Germany never ranked above third.
@@ -155,7 +155,7 @@ performance insights through aggregation, window functions and efficiency segmen
 
 ## ROI Analysis and Budget Optimization
 
-![Budget](images/8_budget_optimization.png)
+![Budget](Images/8_budget_optimization.png)
 *Equal spend across markets produces vastly different returns. Switzerland's 1,144% ROI is nearly 4x Germany's 291%.*
 
 ### Recommended Reallocation
@@ -172,7 +172,7 @@ Total budget remains unchanged. This is a reallocation strategy, not a spend cut
 
 ## Executive Summary
 
-![Executive Summary](images/9_executive_summary.png)
+![Executive Summary](Images/9_executive_summary.png)
 
 | Market | ROI | ROAS | Lift | StatSig | Efficiency | Budget |
 |--------|-----|------|------|---------|------------|--------|
