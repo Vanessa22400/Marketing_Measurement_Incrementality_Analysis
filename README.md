@@ -27,7 +27,7 @@ whether their campaigns are driving real business impact.
 This project simulates the role of a **Measurement Implementation Expert** supporting
 a mid-size e-commerce company operating across the **DACH region**. The client has
 been running Google Ads campaigns consistently, but leadership is questioning whether
-the observed conversions are truly incremental — or whether users would have converted
+the observed conversions are truly incremental, or whether users would have converted
 anyway, with or without advertising exposure.
 
 ---
@@ -55,7 +55,7 @@ Three core questions drive this analysis:
 
 Skepticism toward advertising is a shared DACH trait, but its intensity varies
 significantly by country. **German consumers** are well-documented in their preference
-for transparent, fact-based communication and their resistance to persuasion-driven ads —
+for transparent, fact-based communication and their resistance to persuasion-driven ads,
 a pattern that shows up directly in lower CTRs, higher CPAs and, in this analysis,
 a **negative Conversion Lift**. **Switzerland**, despite sharing the German language
 in its largest region, shows stronger digital engagement and significantly higher
@@ -133,7 +133,7 @@ regression** to estimate long-term channel contribution to revenue.
 *Normalized Adstock shows advertising carry-over effect: impact persists beyond the day of exposure.*
 
 ![MMM Coefficients](Images/6_2_mmm_coefficients.png)
-*Model R² = 0.768. Seasonality is the dominant driver. Among paid channels, Meta and Google show the strongest coefficients — with a multicollinearity caveat discussed in section 6.2.*
+*Model R² = 0.768. Seasonality is the dominant driver. Among paid channels, Meta and Google show the strongest coefficients, with a multicollinearity caveat discussed in section 6.2.*
 
 ---
 
@@ -210,7 +210,7 @@ Total budget remains unchanged. This is a reallocation strategy, not a spend cut
 ## Tools and Technologies
 
 Python · Pandas · NumPy · Scikit-learn · SciPy · Statsmodels · Matplotlib ·
-Seaborn · SQLite · Marketing Mix Modeling · Experimental Design · Incrementality Measurement
+Seaborn · SQLite · Marketing Mix Modeling · Experimental Design · Incrementality Measurement · Plotly
 
 ---
 
