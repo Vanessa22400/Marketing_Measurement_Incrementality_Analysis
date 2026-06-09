@@ -79,7 +79,8 @@ purchasing power, making it the highest-ROI market in the analysis.
 ## Exploratory Data Analysis
 
 ![Regional KPIs](Images/3_1_kpis.png)
-*3-year cumulative performance: Switzerland generates 3.2x more revenue than Germany with the same spend.*
+*3-year cumulative performance: Switzerland generates 3.2x more revenue than Germany
+with the same spend. ROI calculated on total marketing spend across all channels.*
 
 ![Seasonality](Images/3_2_seasonality.png)
 *Q4 drives the strongest revenue across all markets. Switzerland peaks at nearly €58,000/day in December.*
